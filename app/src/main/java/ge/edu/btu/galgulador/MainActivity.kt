@@ -1,7 +1,11 @@
 package ge.edu.btu.galgulador
 
+import android.content.Context
+import android.graphics.Color.BLACK
+import android.graphics.Color.RED
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Vibrator
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -28,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         calcField = findViewById(R.id.calcField)
+        init()
     }
 
     //ვამატებთ ღილაკის ტექსტს ტექსტვიუს ბოლოში (append)
@@ -42,6 +47,8 @@ class MainActivity : AppCompatActivity() {
         }
         //ბოლო სიმბოლო ციფრია
         lastNumeric = true
+        val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        vibratorService.vibrate(30)
         //წელვადი ფონტის ზომა
         TextViewCompat.setAutoSizeTextTypeWithDefaults(calcField, AUTO_SIZE_TEXT_TYPE_UNIFORM )
     }
@@ -62,15 +69,31 @@ class MainActivity : AppCompatActivity() {
             lastNumeric = false
             lastDot = false //ვარესეტებთ წერტილის ნიშნულს. ის ბოლო არ არის.
         }
+        val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        vibratorService.vibrate(20)
+    }
+
+    private fun backSpace(){
+        if(calcField.text.isNotEmpty()){
+            calcField.text = calcField.text.toString().substring(0, calcField.text.toString().length - 1)
+        }
     }
 
     //ტექსტვიუს გათავისუფლება
-    fun onClear(view: View){
-        this.calcField.text = ""
-        lastNumeric = false
-        stateError = false
-        lastDot = false
+    private fun init(){
+        btnDel.setOnLongClickListener {
+            this.calcField.text = ""
+            lastNumeric = false
+            stateError = false
+            lastDot = false
+            true
+        }
+        btnDel.setOnClickListener{
+            backSpace()
+        }
     }
+
+
 
     //მათემატიკური ოპერაციები ExpressionBuilder-ის დახმარებით
     fun onEqual(view: View){

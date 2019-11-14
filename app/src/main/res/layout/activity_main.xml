@@ -50,9 +50,10 @@
                     android:textColor="#fff"
                     android:textSize="30sp"
                     android:layout_weight="33"
-                    android:background="#DD000000"
+                    android:background="@drawable/button"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    android:hapticFeedbackEnabled="true"/>
                 <Button
                     android:id="@+id/btnEight"
                     android:text="8"
@@ -60,9 +61,10 @@
                     android:textColor="#fff"
                     android:textSize="30sp"
                     android:layout_weight="33"
-                    android:background="#DD000000"
+                    android:background="@drawable/button"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    android:hapticFeedbackEnabled="true"/>
                 <Button
                     android:id="@+id/btnNine"
                     android:text="9"
@@ -70,9 +72,10 @@
                     android:textColor="#fff"
                     android:textSize="30sp"
                     android:layout_weight="33"
-                    android:background="#DD000000"
+                    android:background="@drawable/button"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    android:hapticFeedbackEnabled="true"/>
             </LinearLayout>
 
             <LinearLayout
@@ -87,30 +90,33 @@
                     android:textColor="#fff"
                     android:onClick="onDigit"
                     android:textSize="30sp"
-                    android:background="#DD000000"
+                    android:background="@drawable/button"
                     android:layout_weight="33"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    android:hapticFeedbackEnabled="true"/>
                 <Button
                     android:id="@+id/btnFive"
                     android:text="5"
                     android:onClick="onDigit"
                     android:textColor="#fff"
                     android:textSize="30sp"
-                    android:background="#DD000000"
+                    android:background="@drawable/button"
                     android:layout_weight="33"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    android:hapticFeedbackEnabled="true"/>
                 <Button
                     android:id="@+id/btnSix"
                     android:text="6"
                     android:onClick="onDigit"
                     android:textColor="#fff"
                     android:textSize="30sp"
-                    android:background="#DD000000"
+                    android:background="@drawable/button"
                     android:layout_weight="33"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    android:hapticFeedbackEnabled="true"/>
 
             </LinearLayout>
 
@@ -125,30 +131,33 @@
                     android:onClick="onDigit"
                     android:textColor="#fff"
                     android:textSize="30sp"
-                    android:background="#DD000000"
+                    android:background="@drawable/button"
                     android:layout_weight="33"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    android:hapticFeedbackEnabled="true"/>
                 <Button
                     android:id="@+id/btnTwo"
                     android:text="2"
                     android:onClick="onDigit"
                     android:textColor="#fff"
                     android:textSize="30sp"
-                    android:background="#DD000000"
+                    android:background="@drawable/button"
                     android:layout_weight="33"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    android:hapticFeedbackEnabled="true"/>
                 <Button
                     android:id="@+id/btnThree"
                     android:text="3"
                     android:onClick="onDigit"
                     android:textColor="#fff"
                     android:textSize="30sp"
-                    android:background="#DD000000"
+                    android:background="@drawable/button"
                     android:layout_weight="33"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    android:hapticFeedbackEnabled="true"/>
 
             </LinearLayout>
 
@@ -163,30 +172,33 @@
                     android:onClick="onDigit"
                     android:textColor="#fff"
                     android:textSize="30sp"
-                    android:background="#DD000000"
+                    android:background="@drawable/button"
                     android:layout_weight="33"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    android:hapticFeedbackEnabled="true"/>
                 <Button
                     android:id="@+id/btnDot"
                     android:text="."
                     android:onClick="onDecimalPoint"
                     android:textColor="#fff"
                     android:textSize="30sp"
-                    android:background="#DD000000"
+                    android:background="@drawable/button"
                     android:layout_weight="33"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    android:hapticFeedbackEnabled="true"/>
                 <Button
                     android:id="@+id/btnEquals"
                     android:text="="
                     android:onClick="onEqual"
                     android:textColor="#fff"
                     android:textSize="30sp"
-                    android:background="#DD000000"
+                    android:background="@drawable/button"
                     android:layout_weight="33"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    android:hapticFeedbackEnabled="true"/>
 
             </LinearLayout>
 
@@ -201,55 +213,59 @@
 
             <ImageButton
                 android:id="@+id/btnDel"
-                android:background="#8F000000"
-                android:onClick="onClear"
+                android:background="@drawable/delete"
                 android:src="@drawable/bagspaz"
                 android:scaleType="fitCenter"
                 android:textSize="20sp"
                 android:padding="20dp"
                 android:layout_weight="20"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"/>
+                android:layout_height="50dp"
+                android:hapticFeedbackEnabled="true"/>
             <Button
                 android:id="@+id/btnDiv"
                 android:text="/"
                 android:onClick="onOperator"
                 android:textColor="#fff"
-                android:background="#8F000000"
+                android:background="@drawable/operator"
                 android:textSize="20sp"
                 android:layout_weight="20"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:hapticFeedbackEnabled="true"/>
             <Button
                 android:id="@+id/btnMultiply"
                 android:text="*"
                 android:onClick="onOperator"
                 android:textColor="#fff"
-                android:background="#8F000000"
+                android:background="@drawable/operator"
                 android:textSize="20sp"
                 android:layout_weight="20"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:hapticFeedbackEnabled="true"/>
             <Button
                 android:id="@+id/btnSub"
                 android:text="-"
                 android:onClick="onOperator"
                 android:textColor="#fff"
-                android:background="#8F000000"
+                android:background="@drawable/operator"
                 android:textSize="20sp"
                 android:layout_weight="20"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:hapticFeedbackEnabled="true"/>
             <Button
                 android:id="@+id/btnAdd"
                 android:text="+"
                 android:onClick="onOperator"
                 android:textColor="#fff"
-                android:background="#8F000000"
+                android:background="@drawable/operator"
                 android:textSize="20sp"
                 android:layout_weight="20"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:hapticFeedbackEnabled="true"/>
 
         </LinearLayout>
 
