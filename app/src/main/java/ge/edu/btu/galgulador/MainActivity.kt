@@ -1,8 +1,7 @@
 package ge.edu.btu.galgulador
 
 import android.content.Context
-import android.graphics.Color.BLACK
-import android.graphics.Color.RED
+import android.graphics.Color.*
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Vibrator
@@ -27,6 +26,8 @@ class MainActivity : AppCompatActivity() {
 
     //თუ სიმართლეა, მეორე წერტილი (ათწილადისა) აღარ შეიტანება.
     var lastDot: Boolean = false
+
+    var lastRoot: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,6 +63,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
+
     //ვამატებთ ოპერატორებს ტექსტვიუში
     fun onOperator(view: View){
         if (lastNumeric && !stateError){
@@ -86,6 +89,7 @@ class MainActivity : AppCompatActivity() {
             lastNumeric = false
             stateError = false
             lastDot = false
+            upperField.text = ""
             true
         }
         btnDel.setOnClickListener{
@@ -107,6 +111,7 @@ class MainActivity : AppCompatActivity() {
             try {
                 //გაანგარიშება და პასუხის გამოტანა
                 val result = expression.evaluate()
+                upperField.append(calcField.text.toString() + "=")
                 calcField.text = result.toString()
                 lastDot = true //პასუხი შეიცავს წერთილს, ანუ არის ათწილადი (float)
             }catch (ex: ArithmeticException){
